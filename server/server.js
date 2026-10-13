@@ -71,7 +71,7 @@ app.get('/api/dashboard/stats', async (req, res) => {
       pendingCreatives = await Task.countDocuments({ status: { $in: ['To Do', 'In Progress'] } });
       completedTasks = await Task.countDocuments({ status: 'Completed' });
       upcomingPosts = await ContentPost.countDocuments({ status: { $in: ['Scheduled', 'Design Pending', 'Review Required'] } });
-      
+
       const clients = await Client.find();
       monthlyRevenue = clients.reduce((acc, c) => acc + (c.monthlyRetainer || 0), 0);
       taskList = await Task.find();
