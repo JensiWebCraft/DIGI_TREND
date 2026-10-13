@@ -28,12 +28,11 @@ export default function Sidebar({ activePage, setActivePage, onGoHome, currentUs
     initials: 'MK',
     color: 'from-purple-500 to-indigo-500'
   };
-
   return (
-    <aside className="hidden md:flex w-56 bg-[#0b0f1a] text-slate-300 border-r border-slate-800/80 flex-col justify-between shrink-0 min-h-screen select-none relative z-30">
+    <aside className="hidden md:flex w-56 bg-[#0b0f1a] text-slate-300 border-r border-slate-800/80 flex-col justify-between shrink-0 h-screen sticky top-0 select-none z-30">
       
-      {/* Brand Logo Header */}
-      <div>
+      {/* Brand Logo Header & Nav Items */}
+      <div className="flex-1 overflow-y-auto">
         <div className="p-5 flex items-center gap-3 border-b border-slate-800/60">
           <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-purple-600 via-indigo-600 to-cyan-400 p-[1.5px] shadow-md shadow-purple-500/20">
             <div className="w-full h-full bg-[#0b0f1a] rounded-[10px] flex items-center justify-center font-black text-xs text-white">
